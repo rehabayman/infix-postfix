@@ -1,0 +1,20 @@
+{
+  "name": "infix-postfix",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "App for converting infix expressions to postfix expressions and vice versa",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "start": "node index.js"
+  },
+  "author": "Rehab Ayman",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^27.5.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.10.0",
+    "eslint-config-google": "^0.14.0"
+  }
+}
