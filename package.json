@@ -8,8 +8,16 @@
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "start": "node index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rehabayman/infix-postfix.git"
+  },
   "author": "Rehab Ayman",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rehabayman/infix-postfix/issues"
+  },
+  "homepage": "https://github.com/rehabayman/url-monitoring#readme",
   "dependencies": {
     "jest": "^27.5.1"
   },
