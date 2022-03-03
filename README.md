@@ -15,7 +15,7 @@ These steps will get you a copy of the project up and running for development an
 
 ## To Do:
 1. evaluate the expression after postfix conversion. _[done]_
-2. evaluate expressions with multi-digit numbers.
+2. evaluate expressions with multi-digit numbers. _[done]_
 
 ## Built With
 1. Nodejs

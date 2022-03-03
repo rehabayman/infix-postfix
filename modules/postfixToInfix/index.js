@@ -12,6 +12,7 @@ class PostfixToInfixConverter {
    */
   postfixToInfix(postfixExp) {
     const infixStack = new Stack();
+    postfixExp = postfixExp.split(' ');
 
     for (let i = 0; i < postfixExp.length; i++) {
       if (Utils.isOperand(postfixExp[i])) {
@@ -19,11 +20,11 @@ class PostfixToInfixConverter {
       } else {
         const op1 = infixStack.pop();
         const op2 = infixStack.pop();
-        const str = '(' + op2 + postfixExp[i] + op1 + ')';
+        const str = ' ( ' + op2 + ' ' + postfixExp[i] + ' ' + op1 + ' ) ';
         infixStack.push(str);
       }
     }
-    return infixStack.top();
+    return infixStack.top().trim();
   }
 }
 

@@ -20,6 +20,7 @@ class Calculator {
     // Repeat it till the end of the expression.
     const postfixStack = new Stack();
     let char; let op1; let op2; let res = 0;
+    postfixExp = postfixExp.split(' ');
 
     for (let i = 0; i < postfixExp.length; i++) {
       char = postfixExp[i];

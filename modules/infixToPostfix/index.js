@@ -13,15 +13,16 @@ class InfixToPostfixConverter {
   infixToPostfix(infixExp) {
     let postfixExp = ''; const postfixStack = new Stack();
     postfixStack.push('#');
+    infixExp = infixExp.split(' ');
 
     for (let i = 0; i < infixExp.length; i++) {
       if (Utils.isOperand(infixExp[i])) {
-        postfixExp += infixExp[i];
+        postfixExp += infixExp[i] + ' ';
       } else if (infixExp[i] === '(') {
         postfixStack.push(infixExp[i]);
       } else if (infixExp[i] === ')') {
         while (postfixStack.top() !== '#' && postfixStack.top() !== '(') {
-          postfixExp += postfixStack.pop();
+          postfixExp += postfixStack.pop() + ' ';
         }
         postfixStack.pop();
       } else {
@@ -32,7 +33,7 @@ class InfixToPostfixConverter {
           while (postfixStack.top() !== '#' &&
             // eslint-disable-next-line max-len
             (Utils.precedence(infixExp[i]) <= Utils.precedence(postfixStack.top()))) {
-            postfixExp += postfixStack.pop();
+            postfixExp += postfixStack.pop() + ' ';
           }
           postfixStack.push(infixExp[i]);
         }
@@ -40,10 +41,10 @@ class InfixToPostfixConverter {
     }
 
     while (postfixStack.top() !== '#') {
-      postfixExp += postfixStack.pop();
+      postfixExp += postfixStack.pop() + ' ';
     }
 
-    return postfixExp;
+    return postfixExp.trimEnd();
   }
 }
 
