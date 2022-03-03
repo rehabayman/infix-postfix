@@ -12,6 +12,8 @@ These steps will get you a copy of the project up and running for development an
 ## Features
 1. Infix to postfix expression conversion
 2. Postfix to infix expression conversion
+3. Evaluate infix expressions
+4. Evaluate postfix expressions
 
 ## To Do:
 1. evaluate the expression after postfix conversion. _[done]_
