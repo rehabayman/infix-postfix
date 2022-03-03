@@ -14,7 +14,8 @@ These steps will get you a copy of the project up and running for development an
 2. Postfix to infix expression conversion
 
 ## To Do:
-1. evaluate the expression after postfix conversion
+1. evaluate the expression after postfix conversion. _[done]_
+2. evaluate expressions with multi-digit numbers.
 
 ## Built With
 1. Nodejs

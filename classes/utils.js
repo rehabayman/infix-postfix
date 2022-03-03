@@ -29,6 +29,24 @@ class Utils {
   static isOperand(char) {
     return /^[a-zA-Z0-9]+$/i.test(char);
   }
+
+  /**
+   * Determines if the character is a digit
+   * @param {String} char character in the expression
+   * @return {Boolean}
+   */
+  static isDigit(char) {
+    return /^[0-9]+$/i.test(char);
+  }
+
+  /**
+   * Determines if the character is an operator
+   * @param {String} char character in the expression
+   * @return {Boolean}
+   */
+  static isOperator(char) {
+    return /^[\+|-|\*|\/|\^]+$/i.test(char);
+  }
 }
 
 export default Utils;
