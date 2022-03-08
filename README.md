@@ -22,3 +22,8 @@ These steps will get you a copy of the project up and running for development an
 
 ## Built With
 1. Nodejs
+
+## References
+1. [Infix to postfix explanation](https://www.tutorialspoint.com/Convert-Infix-to-Postfix-Expression)
+2. [Postfix to infix explanation](https://www.geeksforgeeks.org/postfix-to-infix/)
+3. [For dealing with negative numbers and negation](https://stackoverflow.com/a/46861656) 
