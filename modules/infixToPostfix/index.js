@@ -16,7 +16,7 @@ class InfixToPostfixConverter {
     infixExp = infixExp.split(' ');
 
     for (let i = 0; i < infixExp.length; i++) {
-      if (Utils.isOperand(infixExp[i])) {
+      if (Utils.isOperand(infixExp[i]) || Utils.isDigit(infixExp[i])) {
         postfixExp += infixExp[i] + ' ';
       } else if (infixExp[i] === '(') {
         postfixStack.push(infixExp[i]);

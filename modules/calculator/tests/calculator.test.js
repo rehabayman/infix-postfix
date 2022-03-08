@@ -30,4 +30,18 @@ describe('Infix Expressions Evaluation', function() {
     const output = Calculator.evaluateInfixExp(input);
     expect(output).toBe(expectedOutput);
   });
+
+  test('{1-(-2)} should output {3}', () => {
+    const input = '1-(-2)';
+    const expectedOutput = 3;
+    const output = Calculator.evaluateInfixExp(input);
+    expect(output).toBe(expectedOutput);
+  });
+
+  test('{- (3 - (- (4 + 5) ) )} should output {-12}', () => {
+    const input = '- (3 - (- (4 + 5) ) )';
+    const expectedOutput = -12;
+    const output = Calculator.evaluateInfixExp(input);
+    expect(output).toBe(expectedOutput);
+  });
 });

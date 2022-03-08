@@ -20,7 +20,7 @@ class PostfixToInfixConverter {
       } else {
         const op1 = infixStack.pop();
         const op2 = infixStack.pop();
-        const str = ' ( ' + op2 + ' ' + postfixExp[i] + ' ' + op1 + ' ) ';
+        const str = '( ' + op2 + ' ' + postfixExp[i] + ' ' + op1 + ' )';
         infixStack.push(str);
       }
     }

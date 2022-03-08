@@ -28,7 +28,11 @@ class Calculator {
         postfixStack.push(parseInt(char));
       } else if (Utils.isOperator(char)) {
         op1 = postfixStack.pop();
-        op2 = postfixStack.pop();
+        try {
+          op2 = postfixStack.pop();
+        } catch (error) {
+          op2 = 0;
+        }
 
         switch (char) {
           case '+':
@@ -61,6 +65,7 @@ class Calculator {
      * @return {Number}
      */
   static evaluateInfixExp(infixExp) {
+    infixExp = Utils.formatExp(infixExp);
     const converter = new InfixToPostfixConverter(infixExp);
     const postfixExp = converter.infixToPostfix(infixExp);
     return this.evaluatePostfixExp(postfixExp);
